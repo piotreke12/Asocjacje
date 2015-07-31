@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  http_basic_authenticate_with name: "test", password: "test1" 
+  http_basic_authenticate_with name: "test", password: "test1", except: :index 
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   # GET /books
